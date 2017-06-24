@@ -1,0 +1,8 @@
+export default {
+	markdown: "<p>For a monthly party, a tradition was started of creating admission coins. The coins are used to make sure only members of the community are given access, food, and drink. As a side-project of my thesis work, we decided to make encoded coins. The coins are fabricated with a series of cavities that encode 32 bits of information. The coins can be read and decoded by a custom-made coin reader (see video below).</p>\n\n<img src='/images/project_pics/coin_00.jpg' width ='600px'/>\n\n<p>The coin is scanned each time a party-goer wants to get more food or drink. By having each person use a uniquely identifiable (anonymized) coin, we're able to track drinking and eating behavior over the course of the night. Drinking too much towards the end of the night? The bartender can be notified and advise slowing down. More playfully though, we intend to iterate in future months with more entertaining uses for the coin. Perhaps the 1000 'customer' gets to (is forced to) wear a king's crown for the night. </p>\n\n\n\n<img src='/images/project_pics/coin_01.jpg'/>\n<iframe width='600' height='338' src='https://www.youtube.com/embed/6hRXu5tQc68' frameborder='0' allowfullscreen></iframe>\n\n<img src='/images/project_pics/coin_02.png' width ='600px'/>\n<img src='/images/project_pics/coin_03.png' width ='600px'/>\n<img src='/images/project_pics/coin_04.jpg' width ='600px'/>\n<img src='/images/project_pics/coin_05.jpg' width ='600px'/>\n\n\n<iframe width='600' height='338' src='https://www.youtube.com/embed/MC87Y0b5bng' frameborder='0' allowfullscreen></iframe>",
+	pic: "nav/coin.jpg",
+	slug: "coins",
+	description: "blank",
+	title: "99Coins",
+	subProjects: []
+};

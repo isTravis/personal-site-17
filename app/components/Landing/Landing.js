@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import content from 'content';
 
 const Landing = function() {
+	console.log(content);
 	return (
 		<div className={'landing-page container'}>
 			<div className={'blocks row'}>
@@ -11,8 +12,8 @@ const Landing = function() {
 						<Link key={`project-${project.slug}`} to={`/project/${project.slug}`} className={'col-6 block'}>
 							<div className={'block-content'}>
 								<span>{project.title}</span>
-								<img src={`/images/${project.smallPic}`} />
-								<p>{project.summary}</p>
+								<img src={`/images/${project.pic}`} />
+								<p>{project.description}</p>
 
 							</div>
 						</Link>

@@ -12,9 +12,8 @@ const About = function() {
 				<div className={'col-12'}>
 					<div className={'heavy'}>About</div>
 					<p>Some content</p>
-				</div>	
+				</div>
 			</div>
-			
 		</div>
 	);
 };

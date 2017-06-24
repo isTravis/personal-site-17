@@ -31,7 +31,7 @@ const Project = function(props) {
 
 			<div className={'row'}>
 				<div className={'col-12'}>
-					<div dangerouslySetInnerHTML={{ __html: projectData.html }} />
+					<div dangerouslySetInnerHTML={{ __html: projectData.markdown }} />
 				</div>
 			</div>
 

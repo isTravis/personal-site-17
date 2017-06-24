@@ -4,7 +4,7 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import Nav from 'components/Nav/Nav';
 import Landing from 'components/Landing/Landing';
 import Waves from 'components/Waves/Waves';
-import Forests from 'components/Forests/Forests';
+import About from 'components/About/About';
 import NoMatch from 'components/NoMatch/NoMatch';
 
 require('./app.scss');
@@ -23,7 +23,7 @@ const App = function() {
 			<Switch>
 				<Route exact path="/" component={Landing} />
 				<Route path="/waves" component={Waves} />
-				<Route path="/forests" component={Forests} />
+				<Route path="/about" component={About} />
 				<Route path="/404.html" component={NoMatch} />
 				<Route path="/*" component={NoMatch} />
 			</Switch>

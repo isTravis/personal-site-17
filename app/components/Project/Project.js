@@ -17,11 +17,10 @@ const Project = function(props) {
 		return prev;
 	}, {});
 
-	console.log(projectData);
 	return (
 		<div className={`project-page container accent${projectData.accentIndex}`}>
 			<Helmet>
-				<title>{projectData.title}</title>
+				<title>{projectData.title} · Travis Rich</title>
 			</Helmet>
 
 			<div className={'row'}>

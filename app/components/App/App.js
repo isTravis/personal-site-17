@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import Nav from 'components/Nav/Nav';
 import Landing from 'components/Landing/Landing';
-import Waves from 'components/Waves/Waves';
+import Project from 'components/Project/Project';
 import About from 'components/About/About';
 import NoMatch from 'components/NoMatch/NoMatch';
 
@@ -22,7 +22,7 @@ const App = function() {
 
 			<Switch>
 				<Route exact path="/" component={Landing} />
-				<Route path="/waves" component={Waves} />
+				<Route path="/project/:slug" component={Project} />
 				<Route path="/about" component={About} />
 				<Route path="/404.html" component={NoMatch} />
 				<Route path="/*" component={NoMatch} />

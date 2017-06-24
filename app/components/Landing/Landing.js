@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import content from 'content';
 
 const Landing = function() {
 	return (
@@ -12,61 +13,15 @@ const Landing = function() {
 			</Link>*/}
 
 			<div className={'blocks row'}>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						PubPub
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						List of Links
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						DbDb
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						GIFGIF
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Detroit IG
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</Link>
-				<Link to={'/about'} className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</Link>
+				{content.projects.map((project)=> {
+					return (
+						<Link key={`project-${project.slug}`} to={`/project/${project.slug}`} className={'col-6 block'}>
+							<div className={'block-content'}>
+								<span>{project.title}</span>
+							</div>
+						</Link>
+					);
+				})}
 			</div>
 		</div>
 	);

@@ -9,6 +9,19 @@ $color3: #FF0098;
 $color4: #00D84B;
 $color5: #9400FF;
 
+@mixin accent-mixin($accentColor) {
+	.heavy, a {
+		color: $accentColor;
+	}
+}
+
+.accent0 { @include accent-mixin(#777); }
+.accent1 { @include accent-mixin($color1); }
+.accent2 { @include accent-mixin($color2); }
+.accent3 { @include accent-mixin($color3); }
+.accent4 { @include accent-mixin($color4); }
+.accent5 { @include accent-mixin($color5); }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -33,6 +46,13 @@ h1 {
 	word-break: break-all;
 }
 
+.heavy {
+	font-size: 3em;
+	font-weight: 900;
+	line-height: 0.9;
+	letter-spacing: -1px;
+}
+
 // While there is some elegance to having components import their own .scss files,
 // and while this compiles just fine with webpack - I choose to import all of the scss files
 // into this main app.scss so that constants (e.g. $darkColor) can be used throughout.
@@ -40,3 +60,4 @@ h1 {
 @import "../NoMatch/nomatch.scss";
 @import "../Nav/nav.scss";
 @import "../Landing/landing.scss";
+@import "../Project/project.scss";

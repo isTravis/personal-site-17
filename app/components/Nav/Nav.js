@@ -6,7 +6,7 @@ const NavBar = function() {
 		<nav className={'navbar container'}>
 			<div className={'row'}>
 				<div className={'col-12'}>
-					<div className={'logo'}>Travis<br />Rich</div>
+					<Link to={'/'} className={'logo heavy'}>Travis<br />Rich</Link>
 					<div className={'nav-links'}>
 						<Link className={'nav-link'} to={'/about'}>About</Link>
 					</div>

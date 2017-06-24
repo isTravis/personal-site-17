@@ -3,13 +3,18 @@ import Helmet from 'react-helmet';
 
 const About = function() {
 	return (
-		<div className={'page'}>
+		<div className={'page container'}>
 			<Helmet>
 				<title>About · Travis Rich</title>
 			</Helmet>
 
-			<h1>About</h1>
-			<p>Some content</p>
+			<div className={'row'}>
+				<div className={'col-12'}>
+					<div className={'heavy color0'}>About</div>
+					<p>Some content</p>
+				</div>	
+			</div>
+			
 		</div>
 	);
 };

@@ -6,21 +6,26 @@
 	// width: 100%;
 	// top: 0;
 	// z-index: 1000000;
-	padding-bottom: 10em;
+	// padding-bottom: 10em;
+	a {
+		text-decoration: none;
+		color: inherit;
+		padding: 0em 1em;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
 	.logo {
-		font-size: 3em;
-		display: inline-block;
-		font-weight: 900;
+		padding: 0em;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	.nav-links {
 		display: inline-block;
 		float: right;
 	}
-	a {
-		text-decoration: none;
-		color: inherit;
-		padding: 0em 1em;
-	}
+	
 }
 

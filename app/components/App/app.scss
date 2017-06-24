@@ -3,6 +3,12 @@
 $textColor: #222;
 $background: #EEE9E8;
 
+$color1: #FF3400;
+$color2: #00C9DB;
+$color3: #FF0098;
+$color4: #00D84B;
+$color5: #9400FF;
+
 body {
 	margin: 0;
 	padding: 0;
@@ -30,6 +36,7 @@ h1 {
 // While there is some elegance to having components import their own .scss files,
 // and while this compiles just fine with webpack - I choose to import all of the scss files
 // into this main app.scss so that constants (e.g. $darkColor) can be used throughout.
+@import './grid.scss';
 @import "../NoMatch/nomatch.scss";
 @import "../Nav/nav.scss";
 @import "../Landing/landing.scss";

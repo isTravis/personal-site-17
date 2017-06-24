@@ -1,23 +1,40 @@
-#landing-page {
-	text-align: center;
-	.card {
-		text-decoration: none;
-		margin: 1em;
-		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
-		max-width: 500px;
-		height: 150px;
-		overflow: hidden;
-		display: inline-block;
-		position: relative;
-		img {
-			width: 100%;
+.landing-page {
+	// text-align: center;
+	// .card {
+	// 	text-decoration: none;
+	// 	margin: 1em;
+	// 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+	// 	max-width: 500px;
+	// 	height: 150px;
+	// 	overflow: hidden;
+	// 	display: inline-block;
+	// 	position: relative;
+	// 	img {
+	// 		width: 100%;
+	// 	}
+	// 	.title {
+	// 		position: absolute;
+	// 		color: white;
+	// 		font-size: 1.5em;
+	// 		padding: .25em .5em;
+	// 		bottom: 0;
+	// 	}
+	// }
+
+	.blocks {
+		color: white;
+		.block {
+			// width: 200px;
+			height: 200px;
+			margin: 1rem 2%;
 		}
-		.title {
-			position: absolute;
-			color: white;
-			font-size: 1.5em;
-			padding: .25em .5em;
-			bottom: 0;
+		.block:nth-child(5n + 1) { background-color: $color1; }
+		.block:nth-child(5n + 2) { background-color: $color2; }
+		.block:nth-child(5n + 3) { background-color: $color3; }
+		.block:nth-child(5n + 4) { background-color: $color4; }
+		.block:nth-child(5n + 5) { background-color: $color5; }
+		.block-content {
+			padding: 1em;
 		}
 	}
 }

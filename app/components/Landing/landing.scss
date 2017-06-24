@@ -22,11 +22,13 @@
 	// }
 
 	.blocks {
-		color: white;
+		
 		.block {
 			// width: 200px;
 			height: 200px;
 			margin: 1rem 2%;
+			color: white;
+			text-decoration: none;
 		}
 		.block:nth-child(5n + 1) { background-color: $color1; }
 		.block:nth-child(5n + 2) { background-color: $color2; }

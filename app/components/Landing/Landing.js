@@ -12,61 +12,61 @@ const Landing = function() {
 			</Link>*/}
 
 			<div className={'blocks row'}>
-				<div className={'col-6 block'}>
+				<Link to={'/about'} className={'col-6 block'}>
+					<div className={'block-content'}>
+						PubPub
+					</div>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
+					<div className={'block-content'}>
+						List of Links
+					</div>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
+					<div className={'block-content'}>
+						DbDb
+					</div>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
+					<div className={'block-content'}>
+						GIFGIF
+					</div>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
+					<div className={'block-content'}>
+						Detroit IG
+					</div>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
 					<div className={'block-content'}>
 						Word
 					</div>
-				</div>
-				<div className={'col-6 block'}>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
 					<div className={'block-content'}>
 						Word
 					</div>
-				</div>
-				<div className={'col-6 block'}>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
 					<div className={'block-content'}>
 						Word
 					</div>
-				</div>
-				<div className={'col-6 block'}>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
 					<div className={'block-content'}>
 						Word
 					</div>
-				</div>
-				<div className={'col-6 block'}>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
 					<div className={'block-content'}>
 						Word
 					</div>
-				</div>
-				<div className={'col-6 block'}>
+				</Link>
+				<Link to={'/about'} className={'col-6 block'}>
 					<div className={'block-content'}>
 						Word
 					</div>
-				</div>
-				<div className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</div>
-				<div className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</div>
-				<div className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</div>
-				<div className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</div>
-				<div className={'col-6 block'}>
-					<div className={'block-content'}>
-						Word
-					</div>
-				</div>
+				</Link>
 			</div>
 		</div>
 	);

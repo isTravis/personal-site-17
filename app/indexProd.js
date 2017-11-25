@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import { Helmet } from 'react-helmet';
-import App from 'components/App/App';
+import App from 'components/App';
 
 
 export default function(locals) {

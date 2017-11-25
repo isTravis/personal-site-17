@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ContactsBar from 'components/ContactsBar/ContactsBar';
+import ContactsBar from 'components/ContactsBar';
 import content from 'content';
 
 const Landing = function() {
@@ -19,7 +19,7 @@ const Landing = function() {
 					{content.projects.map((project)=> {
 						return (
 							<div className={'project-wrapper'} key={`project-${project.slug}`} >
-								<Link className={'project-title'} to={`/project/${project.slug}`}>{project.title}</Link>
+								<Link className={'project-title'} to={`/${project.slug}`}>{project.title}</Link>
 								<div className={'project-description'}>{project.description}</div>
 							</div>
 						);

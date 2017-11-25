@@ -1,28 +1,6 @@
-@import "~normalize.css";
-
 $textColor: #333;
 $background: #F9F9F9;
 $unitHeight: 18px;
-
-// https://coolors.co/ff3400-00c9db-ff0098-00d84b-9400ff
-// $color1: #FF3400;
-// $color2: #00C9DB;
-// $color3: #FF0098;
-// $color4: #00D84B;
-// $color5: #9400FF;
-
-// @mixin accent-mixin($accentColor) {
-// 	.heavy, a {
-// 		color: $accentColor;
-// 	}
-// }
-
-// .accent0 { @include accent-mixin(#777); }
-// .accent1 { @include accent-mixin($color1); }
-// .accent2 { @include accent-mixin($color2); }
-// .accent3 { @include accent-mixin($color3); }
-// .accent4 { @include accent-mixin($color4); }
-// .accent5 { @include accent-mixin($color5); }
 
 body {
 	margin: 0;
@@ -94,30 +72,3 @@ a, a.project-title, .header .contacts a, .header .title a {
 		line-height: 1.6;
 	}
 }
-
-
-// .no-script {
-// 	display: block;
-// 	padding: 2em;
-// 	text-align: center;
-// }
-
-// h1 {
-// 	font-size: 2em;
-// }
-
-// .heavy {
-// 	font-size: 3em;
-// 	font-weight: 900;
-// 	line-height: 0.9;
-// 	letter-spacing: -1px;
-// }
-
-// While there is some elegance to having components import their own .scss files,
-// and while this compiles just fine with webpack - I choose to import all of the scss files
-// into this main app.scss so that constants (e.g. $darkColor) can be used throughout.
-// @import './grid.scss';
-// @import "../NoMatch/nomatch.scss";
-// @import "../Nav/nav.scss";
-// @import "../Landing/landing.scss";
-// @import "../Project/project.scss";

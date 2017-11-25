@@ -1,14 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Route, withRouter, Switch } from 'react-router-dom';
-import Nav from 'components/Nav/Nav';
-import Landing from 'components/Landing/Landing';
-import Project from 'components/Project/Project';
-import About from 'components/About/About';
-import NoMatch from 'components/NoMatch/NoMatch';
+import Landing from 'components/Landing';
+import Project from 'components/Project';
 
-require('./app.scss');
-
+require('../style.scss');
 
 const App = function() {
 	return (
@@ -18,14 +14,9 @@ const App = function() {
 				<meta name="description" content="MIT Media Lab PhD. Building Healthy, Sustainable Knowledge Systems. Eats Peanut Butter." />
 			</Helmet>
 
-			{/* <Nav /> */}
-
 			<Switch>
 				<Route exact path="/" component={Landing} />
-				<Route path="/project/:slug" component={Project} />
-				<Route path="/about" component={About} />
-				<Route path="/404.html" component={NoMatch} />
-				<Route path="/*" component={NoMatch} />
+				<Route path="/:slug" component={Project} />
 			</Switch>
 		</div>
 	);

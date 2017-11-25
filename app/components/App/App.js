@@ -18,7 +18,7 @@ const App = function() {
 				<meta name="description" content="MIT Media Lab PhD. Building Healthy, Sustainable Knowledge Systems. Eats Peanut Butter." />
 			</Helmet>
 
-			<Nav />
+			{/* <Nav /> */}
 
 			<Switch>
 				<Route exact path="/" component={Landing} />

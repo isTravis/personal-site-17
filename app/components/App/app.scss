@@ -1,59 +1,123 @@
 @import "~normalize.css";
 
-$textColor: #222;
-$background: #EEE9E8;
+$textColor: #333;
+$background: #F9F9F9;
+$unitHeight: 18px;
 
 // https://coolors.co/ff3400-00c9db-ff0098-00d84b-9400ff
-$color1: #FF3400;
-$color2: #00C9DB;
-$color3: #FF0098;
-$color4: #00D84B;
-$color5: #9400FF;
+// $color1: #FF3400;
+// $color2: #00C9DB;
+// $color3: #FF0098;
+// $color4: #00D84B;
+// $color5: #9400FF;
 
-@mixin accent-mixin($accentColor) {
-	.heavy, a {
-		color: $accentColor;
-	}
-}
+// @mixin accent-mixin($accentColor) {
+// 	.heavy, a {
+// 		color: $accentColor;
+// 	}
+// }
 
-.accent0 { @include accent-mixin(#777); }
-.accent1 { @include accent-mixin($color1); }
-.accent2 { @include accent-mixin($color2); }
-.accent3 { @include accent-mixin($color3); }
-.accent4 { @include accent-mixin($color4); }
-.accent5 { @include accent-mixin($color5); }
+// .accent0 { @include accent-mixin(#777); }
+// .accent1 { @include accent-mixin($color1); }
+// .accent2 { @include accent-mixin($color2); }
+// .accent3 { @include accent-mixin($color3); }
+// .accent4 { @include accent-mixin($color4); }
+// .accent5 { @include accent-mixin($color5); }
 
 body {
 	margin: 0;
 	padding: 0;
 	width: 100vw;
 	overflow-x: hidden;
-	background-color: $background;
+	font-size: $unitHeight;
 	font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
 }
+.container {
+	max-width: 650px;
+	padding: 0px 2%;
+	margin: 0 auto;
+}
+a, a.project-title, .header .contacts a, .header .title a {
+	color: inherit;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.header {
+	background-color: $background;
+	padding: calc(4 * #{$unitHeight}) 0px;
+	border-bottom: 1px solid #F0F0F0;
+	.title {
+		margin: 0em 0em calc(2 * #{$unitHeight});
+		position: relative;
+		left: -7px;
+		font-weight: 800;
+		a {
+			text-decoration: none;
+		}
+	}
+	.description {
+		margin: 0em 0em calc(2 * #{$unitHeight});
+	}
+	.contacts {
+		font-size: 14px;
+		font-family: 'Courier';
+		a {
+			opacity: 0.5;
+			text-decoration: none;
+		}
+		.spacer {
+			padding: 0em 1em;
+		}
+	}
+	
+}
+.content {
+	padding: calc(4 * #{$unitHeight}) 0px;
+	.project-wrapper {
+		// font-size: 18px;
+		margin-bottom: calc(4 * #{$unitHeight});
+	}
+	.project-title {
+		font-weight: 800;
+		display: block;
+		text-decoration: none;
+		// margin-bottom: calc(0.75 * #{$unitHeight});
+		margin-bottom: $unitHeight;
+	}
+	.project-description {
 
-.no-script {
-	display: block;
-	padding: 2em;
-	text-align: center;
+	}
+	p, ul, ol, h1, h2, h3, img, video {
+		margin: 0em 0em 2em;
+		line-height: 1.6;
+	}
 }
 
-h1 {
-	font-size: 2em;
-}
 
-.heavy {
-	font-size: 3em;
-	font-weight: 900;
-	line-height: 0.9;
-	letter-spacing: -1px;
-}
+// .no-script {
+// 	display: block;
+// 	padding: 2em;
+// 	text-align: center;
+// }
+
+// h1 {
+// 	font-size: 2em;
+// }
+
+// .heavy {
+// 	font-size: 3em;
+// 	font-weight: 900;
+// 	line-height: 0.9;
+// 	letter-spacing: -1px;
+// }
 
 // While there is some elegance to having components import their own .scss files,
 // and while this compiles just fine with webpack - I choose to import all of the scss files
 // into this main app.scss so that constants (e.g. $darkColor) can be used throughout.
-@import './grid.scss';
-@import "../NoMatch/nomatch.scss";
-@import "../Nav/nav.scss";
-@import "../Landing/landing.scss";
-@import "../Project/project.scss";
+// @import './grid.scss';
+// @import "../NoMatch/nomatch.scss";
+// @import "../Nav/nav.scss";
+// @import "../Landing/landing.scss";
+// @import "../Project/project.scss";

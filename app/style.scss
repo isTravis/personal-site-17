@@ -12,10 +12,10 @@ body {
 }
 .container {
 	max-width: 650px;
-	padding: 0px 2%;
+	padding: 0px 5%;
 	margin: 0 auto;
 }
-a, a.project-title, .header .contacts a, .header .title a {
+a, .content .project-title a, .header .contacts a, .header .title a {
 	color: inherit;
 	text-decoration: underline;
 	&:hover {
@@ -29,7 +29,7 @@ a, a.project-title, .header .contacts a, .header .title a {
 	.title {
 		margin: 0em 0em calc(2 * #{$unitHeight});
 		position: relative;
-		left: -7px;
+		// left: -7px;
 		font-weight: 800;
 		a {
 			text-decoration: none;
@@ -60,9 +60,11 @@ a, a.project-title, .header .contacts a, .header .title a {
 	.project-title {
 		font-weight: 800;
 		display: block;
-		text-decoration: none;
-		// margin-bottom: calc(0.75 * #{$unitHeight});
-		margin-bottom: $unitHeight;
+		margin-bottom: calc(0.5 * #{$unitHeight});
+		// margin-bottom: $unitHeight;
+		a {
+			text-decoration: none;	
+		}
 	}
 	.project-description {
 

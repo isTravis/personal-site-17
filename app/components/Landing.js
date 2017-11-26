@@ -19,7 +19,9 @@ const Landing = function() {
 					{content.projects.map((project)=> {
 						return (
 							<div className={'project-wrapper'} key={`project-${project.slug}`} >
-								<Link className={'project-title'} to={`/${project.slug}`}>{project.title}</Link>
+								<div className={'project-title'}>
+									<Link to={`/${project.slug}`}>{project.title}</Link>
+								</div>
 								<div className={'project-description'}>{project.description}</div>
 							</div>
 						);

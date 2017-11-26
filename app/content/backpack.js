@@ -1,6 +1,6 @@
 export default {
-	title: 'backpackHacks',
-	description: 'summary',
+	title: 'Backpack Hacks',
+	description: 'Collaboration with Jansport to build the digital backpacks we want.',
 	slug: 'backpack',
 	pic: 'nav/jansport.jpg',
 	html: `

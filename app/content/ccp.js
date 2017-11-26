@@ -1,12 +1,12 @@
 export default {
-	title: 'compCamera',
+	title: 'Computational Camera',
 	description: 'Taking cameras beyond image capture',
 	slug: 'ccp',
 	pic: 'nav/ccp.jpg',
 	html: `
 		<p>This page captures my projects and work completed for <a href='http://web.media.mit.edu/~raskar/' target='blank'>Ramesh Raskar's</a> Fall 2011 <a href='http://cameraculture.media.mit.edu/Fall2011ComputationalCamera' target='blank'>MAS.531 Computational Camera and Photography</a> course. </p>
 		<h4>Projects</h4>
-		<ol list-style='non'>                                   
+		<ol list-style='non'>
 			<li><a href='#channelmixing'>Project 1 - Channel Mixing</a></li>
 			<li><a href='#lightfield'>Project 2 - LightField Photography</a></li>
 			<li><a href='#multiflash'>Project 3 - Multiflash Imaging</a></li>
@@ -18,7 +18,7 @@ export default {
 
 		<p>For the first project, we've been assigned to take multiple photos, each lit differently, and then relight the image by mixing and matching the color channels.</p>
 		<p>A demo set is shown below:</p>
-		<img src='/images/project_pics/ccp/p1_files/relight_demo.jpg' alt='Gargoyles!' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/relight_demo.jpg' alt='Gargoyles!' />
 		<p>In the remixed image, the left-lit image is used as the blue channel while the right-lit channel is used as the red channel. </p>
 
 		<h5>Getting Started with Cinder</h5>
@@ -62,17 +62,17 @@ export default {
 		}	
 		</code>
 		<p>The results, applied to our hard working Lego buddies, are as follows:</p>
-		<img src='/images/project_pics/ccp/p1_files/lego_demo.jpg' alt='Lego!' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/lego_demo.jpg' alt='Lego!' />
 		
 		<h5>Taking the Photos</h5>
 		<p>Since we can't rely on Lego stock images forever, lets take our own. I've taken three sets of pictures, each lit from three different directions. Many thanks to the Viral Spaces group for providing the random toys and setup materials, and of course to Sam Luescher for use of his camera. </p>
 		<p>For my light source, I used a goose-neck lamp placed behind the camera. To switch the light direction, I simply bent the lamp to one side or the other.</p>
 		<p>Scene 1:</p>
-		<img src='/images/project_pics/ccp/p1_files/scene1.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/scene1.jpg' alt='Scene' />
 		<p>Scene 2:</p>
-		<img src='/images/project_pics/ccp/p1_files/scene2.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/scene2.jpg' alt='Scene' />
 		<p>Scene 3:</p>
-		<img src='/images/project_pics/ccp/p1_files/scene3.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/scene3.jpg' alt='Scene' />
 
 		<h5>Channel Mixing</h5>
 		<p>The goal at hand now is to take the three pictures in a given set, isolate one of their RGB channels, and then remix the three individual channels into a single image. There are four main functions that are used in my Cinder app to achieve this:</p>
@@ -171,21 +171,21 @@ export default {
 								
 		<h5>Results</h5>
 		<p>The following diagram depicts which input images are mapped to which pixel values. For example, in Output 1, the red pixels are taken from input1, the green pixels are taken from input2, and the blue pixels are taken from input3.</p>
-		<img src='/images/project_pics/ccp/p1_files/outputDiagram.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/outputDiagram.jpg' alt='Scene' />
 		
 		<p>The results of channelMixing are shown below (in accordance to the above diagram). Please open the images in a new tab (right click or drag to tab bar in modern browsers) for to view full-size.</p>
 		
 		<p>Scene 1:</p>
-		<img src='/images/project_pics/ccp/p1_files/scene1.jpg' alt='Scene' width='600px' align='center'/>
-		<img src='/images/project_pics/ccp/p1_files/output1.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/scene1.jpg' alt='Scene' />
+		<img src='/images/project_pics/ccp/p1_files/output1.jpg' alt='Scene' />
 		
 		<p>Scene 2:</p>
-		<img src='/images/project_pics/ccp/p1_files/scene2.jpg' alt='Scene' width='600px' align='center'/>
-		<img src='/images/project_pics/ccp/p1_files/output2.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/scene2.jpg' alt='Scene' />
+		<img src='/images/project_pics/ccp/p1_files/output2.jpg' alt='Scene' />
 		
 		<p>Scene 3:</p>
-		<img src='/images/project_pics/ccp/p1_files/scene3.jpg' alt='Scene' width='600px' align='center'/>
-		<img src='/images/project_pics/ccp/p1_files/output3.jpg' alt='Scene' width='600px' align='center'/>
+		<img src='/images/project_pics/ccp/p1_files/scene3.jpg' alt='Scene' />
+		<img src='/images/project_pics/ccp/p1_files/output3.jpg' alt='Scene' />
 
 			
 		<h4 id="lightfield">Project 2 - LightField Photography</h4>
@@ -242,24 +242,24 @@ export default {
 
 		<h5>Test Photos</h5>
 		<p><a href='http://www.eecis.udel.edu/~yu/'>Professor Jingyi Yu</a> from the University of Delaware, a leading researcher in the field of computational photography, provides a set of sample images with which this code can be tested. The picture set is available here (as of 10/06/11):  <a href='http://www.eecis.udel.edu/~yu/Teaching/CISC829_S10/handouts/toyLF.zip'> http://www.eecis.udel.edu/~yu/Teaching/CISC829_S10/handouts/toyLF.zip</a>. 256 images are provided, but for the sake of simplicity, only the top row of 16 images is used in this analysis. The first and last images in the set are shown below.</p>	
-		<img width='600px' src='/images/project_pics/ccp/p2_files/testImage_sample.jpg'/>
+		<img src='/images/project_pics/ccp/p2_files/testImage_sample.jpg'/>
 		<p>The above code yields the ability to digitally refocus this set of images. The resulting output, which confirms the algorithm used, is given below. As one can see, we can digitally focus on the background, midground, and foreground.</p>
 		<img width = '600px' src='/images/project_pics/ccp/p2_files/testResults.jpg'/>
 
 		<h5>Data Capture</h5>
 		<p>To capture my own lightfield photos, I've setup a Nikon D7000 along a marked surface. The camera is shifted one inch to the right for each photo and a total of 16 photos are taken. The first and last picture of the set are shown below:</p>	
-		<img width='600px' src='/images/project_pics/ccp/p2_files/myImage_sample.jpg'/>	
+		<img src='/images/project_pics/ccp/p2_files/myImage_sample.jpg'/>	
 
 		<h5>Results</h5>
 		<p>The results from applying the above algorithm to my captured images are given below. As you can see, the large inter-image spacing results in a motion blur type effect on the out-of-focus parts. Furthermore, it gives us a very short effective depth of field, as can be seen from the fact that we can selectively focus on many foreground objects.</p>
-		<img width='600px' src='/images/project_pics/ccp/p2_files/lightFieldResults.jpg'/>
+		<img src='/images/project_pics/ccp/p2_files/lightFieldResults.jpg'/>
 
 		<h4 id="multichromatic">Project 3 - Multichromatic Flash</h4>
 		<p>Project 4 explores the realm of computational illumination. Rather than tweaking our capture parameters, we can tweak our environment parameters (in this case the camera flash) to create similarly fascinating results. The underlying principal is that we now have a camera flash that is not a single burst of white light, but discrete bursts of red, green, and then blue light in sequential order. Given that the exposure time of the shot is longer than the full sequence of red, green, and blue flashes, regular still imagery will appear no different. The three light colors will be added together such that the final result appears the same as a white-lit scene. Moving objects, however, will appear quite different. Because they will be at a different position in space at each flash color, a color trail of it's motion will appear. So the end result is thus: still objects will appear no different than if they had be shot in white light, while moving objects will have a distinct color trail detailing their motion. Importantly, the exact contour and size of the color trail can be used in interesting ways to determine properties of the motion of the object.</p>
 		
 		<h5>Software Setup</h5>
 		<p>Unlike previous projects, where the software portion of the exercise focuses on editing the collected images, the software section here instead focusing on creating the right environment for the image collection. Namely, the software creates the temporally dynamic color flash. For a simple first approach, I used my 27' computer monitor as the flash source. This choice gave me a large, bright illumination source that could be easily controlled. Of course, the end goal is to have a stand-alone flash component that would actually connect direction to the camera, but this method will provide a good proof of concept.</p>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/monitorFlash.jpg'/>
+		<img src='/images/project_pics/ccp/p4_files/monitorFlash.jpg'/>
 		<p><a href='http://www.processing.org'>Processing</a> was used to control the screen's output. A large rectangle with the same dimensions as the monitor is created and the fill color of this rectangle is then changed at some time interval. The parameter totalFlashTime allows the user to set the flash time. Each color will be flashed for one-third of this value. The result is a bit jarring to look at, but it gets the job done. The simple code that runs the flash algorithm is given below:</p>
 		<code>
 		int totalFlashTime = 100; //In milliseconds
@@ -288,18 +288,18 @@ export default {
 				
 		<h5>Multichromatic Flash Results</h5>
 		<p>The resulting images have the distinct motion-color effect that we hoped to see.</p>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/multiChromFlash1.JPG'/>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/multiChromFlash2.JPG'/>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/multiChromFlash3.JPG'/>
+		<img src='/images/project_pics/ccp/p4_files/multiChromFlash1.JPG'/>
+		<img src='/images/project_pics/ccp/p4_files/multiChromFlash2.JPG'/>
+		<img src='/images/project_pics/ccp/p4_files/multiChromFlash3.JPG'/>
 		
 		<p>We can see that the falling ball and crumpled pieces of paper leave a distinct color trail as opposed to just appearing blurry. In contrast, the surrounding background appears to have had standard white illumination. Small amounts of motion are easily detected, as can be seen in the first image, where the pieces of paper that have already fallen and hit the table can still be seen to have a color outline as they wiggle to a stop.</p>
 		
 		<p>We can also capture the motion of things that are moving in an oscillatory fashion (as opposed to just falling in one direction) - in this case, my hand and arm.  By analyzing the multiple red (or green or blue) color lines that are seen (especially in the second image), it is possible to determine the rate at which my arm was waving back and forth. </p>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/multiChromFlash4.JPG'/>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/multiChromFlash5.JPG'/>
+		<img src='/images/project_pics/ccp/p4_files/multiChromFlash4.JPG'/>
+		<img src='/images/project_pics/ccp/p4_files/multiChromFlash5.JPG'/>
 					
 		<p>Lastly, if we move the camera itself in the middle of an exposure, we can see that all objects will get a color-trailed blur.</p>
-		<img width='600px' src='/images/project_pics/ccp/p4_files/multiChromFlash6.JPG'/>
+		<img src='/images/project_pics/ccp/p4_files/multiChromFlash6.JPG'/>
 		
 		<p>While these images serve as a proof-of-concept for the idea, the more interesting part comes when we start using the information constrained in these trails to calculate properties of the objects in motion (speed, acceleration, frequency, etc). Explorations in this direction will be coming in the following weeks - stay tuned.</p>
 
@@ -308,7 +308,7 @@ export default {
 		<p>Project 3 takes a look at a solution to the computer vision challenge of determining 3D objects from highly textured, complex images. The solution we'll be looking at to solve this is multi-flash imaging. A more in-depth introduction to the technique, as well as many references, can be found at Ramesh Raskar's site for <a href='http://web.media.mit.edu/~raskar/NprCamera/'>non-photorealistic imaging</a>.</p>
 		
 		<p> The simple principle behind this technique is to take multiple images of a scene, with each image being illuminated from a different location. This will create the effect of having multiple camera flashes located at different spots about the camera. This produces multiple images each with their own unique shadowing. The variances in this shadowing can then be used to determine 3D objects from the textured background of a scene. A quick example (as taken from Raskar's above site) can be seen by applying this technique to photographs of an engine. </p>
-		<img width='600px' src='/images/project_pics/ccp/p3_files/engineExample.jpeg'/>
+		<img src='/images/project_pics/ccp/p3_files/engineExample.jpeg'/>
 		<p>As the last two panels show, the multi-flash technique (3rd panel) creates a clear, understandable 3D 'sketch' of the engine, while a simple edge-detection algorithm (4th panel) produces a mess of contours and textures.</p>
 		<p> Furthermore, the same effect can be produced by illuminating a scene with three differently colored sources, each in a different location. By taking a single image and isolating the R,G, and B channels, three distinct shadows can be obtained and the same algorithm as used for the multi-flash technique can be applied. In this project, I explore both routes: multi-flash and multi-color.</p>
 
@@ -338,9 +338,9 @@ export default {
 		
 		<h5>Multi-flash Technique</h5>
 		<p>For the multi-flash technique I used a setup fabricated by <a href='http://mit2011.luescher.org/blog/'>Sam Luescher</a> that creates an LED flash in four different locations on a one-second interval. The results of which are given below (excuse the anger - proof I usually smile: <a href='p3_files/scienceSmile.jpg'>Science!</a>)</p>
-		<img width='600px' src='/images/project_pics/ccp/p3_files/face_input.jpg'/>
+		<img src='/images/project_pics/ccp/p3_files/face_input.jpg'/>
 		<p>Applying the multi-flash technique to these input photos provides the following results:</p>
-		<img width='600px' src='/images/project_pics/ccp/p3_files/face_results.jpg'/>
+		<img src='/images/project_pics/ccp/p3_files/face_results.jpg'/>
 		<p>The confidence image (left panel) shows clearly the 'sketch' effect that is seen in other applications of this algorithm, while the outline image (right panel) produces a pretty good outline of my face and ignores the background texture. In the left panel, also note the detection of fine hairs at the top of my head, showing the accuracy of such a technique to determine fine qualities. The teeth show some undesired effects though as the LED flash causes a different reflection from the teeth in each image, resulting in a blurry artifact.</p>
 
 		<h5>Multi-color Technique</h5>
@@ -349,7 +349,7 @@ export default {
 		<p>The image on the left is the original input source image of my hand. The middle image is the confidence map and the third, rightmost image is the edge map that is generated. The scanned image of a hand is placed next to my real hand to show that the algorithm will not pick up edges from flat textures. The algorithm works quite well in this regard, as the outline of my hand is clearly seen in the third panel, while the scanned image of a hand produces no outline. Unfortunately, the three sources did not provide enough contour data to create a closed outline of my hand. To fix this, either the multi-flash technique needs to be used, or the RGB light sources need to be repositioned to more appropriately capture the shadow information. </p>
 					
 		<p>We also captured an RGB illuminated image of a conference phone. We chose this object because of it's many complex ridges, textures, and buttons. The results came out nicely as seen below.</p>
-		<img width='600px' src='/images/project_pics/ccp/p3_files/polycom.jpg'/>
+		<img src='/images/project_pics/ccp/p3_files/polycom.jpg'/>
 		<p>Again, the leftmost image is the original image, the middle panel is the confidence map, and the third panel is the edge map that is generated. Also notice that, similar to the hand-image, the final edge map in the third panel does not form a closed contour map - some of the edges of the phone are missing as the shadows correlating to these edges were not completely captured. The ridges of the middle speaker are very nicely captured though, showing again the power of this algorithm to capture fine details.</p>
 
 		<h4 id="multichromatic_motion">Project 5 - Multichromatic Motion</h4>
@@ -360,7 +360,7 @@ export default {
 		<h5>Method</h5>
 		<p>To explore this domain, a multichromatic flash system is created. The main components of this system consist of a camera, an RGB flash, and a linear actuator. Each of these components is remotely controllable.</p>
 		<p>Several constrains are important to consider when choosing the camera sys- tem. Most importantly, the camera must precisely synchronize with the RGBlash. Thus, being able to accurately control the exposure time and shutter state is of high importance. Furthermore, given the controllability of the camera, the RGB flash must be similarly controllable such that the two components can be driven from a single processing unit. Thus, the state of each colored light source must be temporally controllable. An interfacing microcontroller device can then manage both components and precisely synchronize operation.</p>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img1.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img1.jpg'/>
 			
 		<p>In order to obtain quantitative results, a remotely controllable linear ac- tuator is also needed. The linear actuator will serve as the moving object of interest in our captured scene. By having fine-grain control over the motion of the linear actuator, it is possible to compare the computed motion properties to the known real-world dynamics. Again, the remote controllability of the linear actuator allows us to synchronously drive the actuator to match the timing of the camera and multichromatic flash.</p>
 		<p>The step-by-step routine that the microcontroller will run in order to capture the images is as follows:</p>
@@ -382,21 +382,21 @@ export default {
 		<p>In order to interface the Camera to the Arduino board, a USB cable is used. One side of the USB cable is cut and the individual pins are tied to digital IO pins on the Arduino board. The other side of the cable is connected to the standard camera USB port.</p>
 		<h6>Multichromatic Flash</h6>
 		<p>Three Luxeon Rebel LEDs are used to create the multichromatic (in this case, tri-color) flash. Warm-white LEDs are used and red, green, and blue filter sheets are placed over each LED. The LEDs are driven by a simple switching circuit that interfaces to the Arduino board. Each LED can be turned on and off independently of the other LEDs.</p>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img2.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img2.jpg'/>
 		<h6>Linear Actuator</h6>
 		<p>The linear actuator is used to create a repeatable motion for a controlled setup over many captures. A motorized potentiometer is used. A bracket is driven by a DC motor, which is controlled by an Arduino board, and the position of the bracket is given as a potentiometer reading. Thus, a feedback loop can be designed to drive the bracket to any position. One challenge associated with this technique is defining a known speed for the moving bracket. While the DC motor can only control the speed of the bracket through a PWM value. There is no obvious correlation to any real unit scale. To overcome this challenge, a series of PWM settings were chosen and tested for their associated speeds. A software timer is used to measure the time taken to travel the entire length of the linear actuator. The measured time is averaged over many runs for a given setting and the corresponding speed can be determined. Furthermore, using this data, a photo can be produced that captures the full range of motion by choosing a travel time that matches the exposure time of the camera.</p>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img3.jpg'/>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img4.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img3.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img4.jpg'/>
 		<h6>Enclosure</h6>
 		<p>An enclosure is fabricated to hold the components involved in the system, ex- cluding the linear actuator. The Arduino board, LED driving circuitry, and RGB LEDs are contained by the enclosure. A simple snap-fit box design is used.</p>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img5.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img5.jpg'/>
 		<p>The box conveniently hides away many of the more cumbersome components, and has a clean two-cable interface on it\u2019s rear consisting of the camera USB cable and a cable to connect to the linear actuator.</p>
 		<h6>Full System</h6>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img6.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img6.jpg'/>
 		
 		<h5>Results</h5>
 		<p>The final system uses an exposure time of 1.5 seconds and the images are cap- tured in a low-light setting. Comparing these two images, the ad- ditional information carried in the multichromatic flash image can be clearly appreciated.</p>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img7.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img7.jpg'/>
 		<h6>Image Processing</h6>
 		<p>Matlab is used to perform the image processing tasks required to compute the motion properties of the object in this capture. The code used to perform this analysis can be found in Section 7. To prepare the images for calculation, a simple list of operations is performed:</p>
 		<ol>
@@ -406,7 +406,7 @@ export default {
 			<li>Blob Isolation</li>
 		</ol>
 		<p>After these steps are performed, we have three distinct blobs that represent the blurred position of the moving object at the three time intervals. The ex- trema and centroid of these blobs can then be calculated in order to analyze the positional differences that will allow the calculation of optical flow properties. Each of these steps, as well as the extrema and centroid calculation are shown below. Given that we know certain properties of the system, such as the order in which the illumination sources are triggered and the duration for which they remain on, we can begin to analyze the motion of the object.</p>
-		<img width='600px' src='/images/project_pics/ccp/p5_files/motion_img8.jpg'/>
+		<img src='/images/project_pics/ccp/p5_files/motion_img8.jpg'/>
 		<h6>Direction</h6>
 		<p>The most obvious claim that can be made from this data is the direction of motion. By taking the centroid positions of each blob, we can calculate and draw a direction vector that connects the start and end positions. A vector from the red-centroid to the blue-centroid can be drawn, or more fine grain detail can be gathered by using the intermediary green-centroid to produce two direction vectors: one for the first interval of travel and one for the second. See image below.</p>
 		

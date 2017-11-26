@@ -1,5 +1,5 @@
 export default {
-	title: 'bopscotch',
+	title: 'Bopscotch',
 	description: 'A tweak on the classic hopscotch game',
 	slug: 'bopscotch',
 	pic: 'nav/bopscotch.jpg',

@@ -67,8 +67,9 @@ a, a.project-title, .header .contacts a, .header .title a {
 	.project-description {
 
 	}
-	p, ul, ol, h1, h2, h3, img, video {
+	p, ul, ol, h1, h2, h3, img, video, iframe {
 		margin: 0em 0em 2em;
 		line-height: 1.6;
+		max-width: 100%;
 	}
 }

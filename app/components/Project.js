@@ -36,11 +36,11 @@ const Project = function(props) {
 
 			<div className={'content'}>
 				<div className={'container'}>
-					{!projectData.markdown &&
+					{!projectData.html &&
 						<h1>Project not found</h1>
 					}
-					{projectData.markdown &&
-						<div dangerouslySetInnerHTML={{ __html: projectData.markdown }} />
+					{projectData.html &&
+						<div dangerouslySetInnerHTML={{ __html: projectData.html }} />
 					}
 				</div>
 			</div>

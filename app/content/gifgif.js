@@ -16,16 +16,16 @@ export default {
 		<p>These are by no means definitive, correct, or absolute, but our goal is to make a gif website - not solve the open questions of universal human emotions. Some reading for those interested: <a target='_blank' href='http://www.paulekman.com/wp-content/uploads/2013/07/Basic-Emotions.pdf'>[1]</a> <a target='_blank' href='http://psycnet.apa.org/journals/psp/17/2/124/'>[2]</a></p> 
 		<h4>Press</h4>
 		<ul>
-			<a href='http://www.wired.co.uk/news/archive/2014-03/06/mit-map-language-of-gifs' target='_blank'><li>Wired.co.uk</li></a>
-	        <a href='http://www.buzzfeed.com/ariannarebolini/map-the-emotional-language-of-gifs-with-mits-gifgif-project' target='_blank'><li>Buzzfeed</li></a>
-	        <a href='http://qz.com/185573/these-mit-researchers-want-to-translate-shakespeare-into-gifs/' target='_blank'><li>Quartz</li></a>
-			<a href='http://www.fastcodesign.com/3027467/mit-students-invent-a-universal-language-made-of-gifs' target='_blank'><li>FastCo Design</li></a>
-			<a href='http://www.theverge.com/2014/3/11/5496890/are-animated-gifs-a-language-mit-student-project-aims-to-find-out' target='_blank'><li>The Verge</li></a>
-			<a href='http://io9.com/this-gif-translation-game-will-take-over-your-day-1542132553' target='_blank'><li>io9</li></a>
-			<a href='http://www.theatlantic.com/education/archive/2014/03/these-mit-researchers-want-to-turn-gifs-into-a-language/284322/' target='_blank'><li>Atlantic</li></a>
-			<a href='http://time.com/18172/these-students-want-to-turn-gifs-into-their-own-language/' target='_blank'><li>Time</li></a>
-			<a href='http://www.geekosystem.com/gifgifgame/' target='_blank'><li>GeekoSystem</li></a>
-			<a href='http://www.boston.com/news/source/2014/03/get_excited_mit_students_are_conducting_the_gif-iest_study_a.html' target='_blank'><li>Boston.com</li></a>
+			<li><a href='http://www.wired.co.uk/news/archive/2014-03/06/mit-map-language-of-gifs' target='_blank'>Wired.co.uk</a></li>
+	        <li><a href='http://www.buzzfeed.com/ariannarebolini/map-the-emotional-language-of-gifs-with-mits-gifgif-project' target='_blank'>Buzzfeed</a></li>
+	        <li><a href='http://qz.com/185573/these-mit-researchers-want-to-translate-shakespeare-into-gifs/' target='_blank'>Quartz</a></li>
+			<li><a href='http://www.fastcodesign.com/3027467/mit-students-invent-a-universal-language-made-of-gifs' target='_blank'>FastCo Design</a></li>
+			<li><a href='http://www.theverge.com/2014/3/11/5496890/are-animated-gifs-a-language-mit-student-project-aims-to-find-out' target='_blank'>The Verge</a></li>
+			<li><a href='http://io9.com/this-gif-translation-game-will-take-over-your-day-1542132553' target='_blank'>io9</a></li>
+			<li><a href='http://www.theatlantic.com/education/archive/2014/03/these-mit-researchers-want-to-turn-gifs-into-a-language/284322/' target='_blank'>Atlantic</a></li>
+			<li><a href='http://time.com/18172/these-students-want-to-turn-gifs-into-their-own-language/' target='_blank'>Time</a></li>
+			<li><a href='http://www.geekosystem.com/gifgifgame/' target='_blank'>GeekoSystem</a></li>
+			<li><a href='http://www.boston.com/news/source/2014/03/get_excited_mit_students_are_conducting_the_gif-iest_study_a.html' target='_blank'>Boston.com</a></li>
 		</ul>
 	`,
 };

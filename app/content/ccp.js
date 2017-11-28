@@ -26,40 +26,40 @@ export default {
 		<p>If you're using OSX and Xcode - <a href'http://libcinder.org/docs/welcome/MacNewProject.html'>setting up Cinder</a> is incredibly easy. What's more, Cinder also offers some nice <a href='http://libcinder.org/docs/v0.8.3/guide___images.html'>introduction to image processing</a> using the framework - lucky us!. </p>
 		<p>To play around with this, the first quick function I wrote was one to isolate the individual RGB channels of an image. Since the task is relatively computationally easy, I've opted to write this bit of code such that it is easy for humans to read and comprehend. The expense of that is computational elegance - it's a bit brute force - but for this task, that's fine.</p>
 		<code>
-			void isolateChannel (Surface *surface, char color){
-				Surface::Iter iter = surface->getIter( getWindowBounds() );
-				
-				//If you want to isolate red channel, 
-				//set blue and green pixels to 0
-				if (color == 'r'){
-						while( iter.line() ) {
-							while( iter.pixel() ) {
-								iter.b() = 0;
-							iter.g() = 0;
-						}
-					}
-				}
-				//If you want to isolate green channel, 
-				//set blue and red pixels to 0
-				if (color == 'g'){
-						while( iter.line() ) {
-							while( iter.pixel() ) {
-								iter.b() = 0;
-							iter.r() = 0;
-						}
-					}
-				}
-				//If you want to isolate blue channel, 
-				//set red and green pixels to 0
-				if (color == 'b'){
-						while( iter.line() ) {
-							while( iter.pixel() ) {
-								iter.r() = 0;
-							iter.g() = 0;
-						}
-					}
-				}
-		}	
+void isolateChannel (Surface *surface, char color){
+	Surface::Iter iter = surface->getIter( getWindowBounds() );
+	
+	//If you want to isolate red channel, 
+	//set blue and green pixels to 0
+	if (color == 'r'){
+			while( iter.line() ) {
+				while( iter.pixel() ) {
+					iter.b() = 0;
+				iter.g() = 0;
+			}
+		}
+	}
+	//If you want to isolate green channel, 
+	//set blue and red pixels to 0
+	if (color == 'g'){
+			while( iter.line() ) {
+				while( iter.pixel() ) {
+					iter.b() = 0;
+				iter.r() = 0;
+			}
+		}
+	}
+	//If you want to isolate blue channel, 
+	//set red and green pixels to 0
+	if (color == 'b'){
+			while( iter.line() ) {
+				while( iter.pixel() ) {
+					iter.r() = 0;
+				iter.g() = 0;
+			}
+		}
+	}
+}	
 		</code>
 		<p>The results, applied to our hard working Lego buddies, are as follows:</p>
 		<img src='/images/project_pics/ccp/p1_files/lego_demo.jpg' alt='Lego!' />
@@ -84,90 +84,94 @@ export default {
 		</ol>
 		<p>The setup function is used to import image resources and make function call to begin merge process. Handles the format conversion once the images are merged (simply converts the Surface objects to a Texture than can be drawn to screen)</p>
 		<code>
-		void SurfaceBasicApp::setup(){
-				Surface mySurface1 (loadImage( loadResource( 'scene1_a.jpeg' ) ) ); 
-			Surface mySurface2 (loadImage( loadResource( 'scene1_b.jpeg' ) ) );
-			Surface mySurface3 (loadImage( loadResource( 'scene1_c.jpeg' ) ) );
-			
-			Surface processedImage( processImage(mySurface1, mySurface2, mySurface3));
-			mProcessedImageTex = gl::Texture( processedImage ); //Convert the Surface object to a Texture object for drawing
-			
-			imageWritten = 0;
-		}</code>
+void SurfaceBasicApp::setup(){
+		Surface mySurface1 (loadImage( loadResource( 'scene1_a.jpeg' ) ) ); 
+	Surface mySurface2 (loadImage( loadResource( 'scene1_b.jpeg' ) ) );
+	Surface mySurface3 (loadImage( loadResource( 'scene1_c.jpeg' ) ) );
+	
+	Surface processedImage( processImage(mySurface1, mySurface2, mySurface3));
+	mProcessedImageTex = gl::Texture( processedImage ); //Convert the Surface object to a Texture object for drawing
+	
+	imageWritten = 0;
+}
+		</code>
 							
 		<p>The processImage function calls the isolateChannel function for each image and subsequently calls the mergeChannels function. processImage returns the Surface object of the merged image.</p>
 		<code>
-		Surface processImage( const Surface input1, const Surface input2, const Surface input3  ){
-				// make the result be a copy of input
-			Surface resultSurface1( input1.clone() );
-			isolateChannel( &resultSurface1, 'r' );
-			
-			Surface resultSurface2( input2.clone() );
-			isolateChannel( &resultSurface2, 'g' );
-			
-			Surface resultSurface3( input3.clone() );
-			isolateChannel( &resultSurface3, 'b' );
-			
-			Surface resultSurface (mergeChannels(&resultSurface1, &resultSurface2, &resultSurface3));
-			//Surface resultSurfaceFinal = resultSurfaceFinal;
-			
-			return resultSurface;
-		}</code>
+Surface processImage( const Surface input1, const Surface input2, const Surface input3  ){
+		// make the result be a copy of input
+	Surface resultSurface1( input1.clone() );
+	isolateChannel( &resultSurface1, 'r' );
+	
+	Surface resultSurface2( input2.clone() );
+	isolateChannel( &resultSurface2, 'g' );
+	
+	Surface resultSurface3( input3.clone() );
+	isolateChannel( &resultSurface3, 'b' );
+	
+	Surface resultSurface (mergeChannels(&resultSurface1, &resultSurface2, &resultSurface3));
+	//Surface resultSurfaceFinal = resultSurfaceFinal;
+	
+	return resultSurface;
+}
+		</code>
 							
 		<p>The isolateChannel function takes a pointer to a Surface object and char as input. The char specifies which channel will be isolated 'r', 'g', or 'b'. Since a Surface pointer is given, the Surface itself is edited.</p>
 		<code>
-		// Takes input surface and isolates either an RGB channel. char color should be 'r', 'g', or 'b'. 
-		void isolateChannel (Surface *surface, char color){
-				Surface::Iter iter = surface->getIter( getWindowBounds() );
-			
-			//If you want to isolate red channel, set blue and green pixels to 0
-			if (color == 'r'){
-					while( iter.line() ) {
-						while( iter.pixel() ) {
-							iter.b() = 0;
-						iter.g() = 0;
-					}
-				}
+// Takes input surface and isolates either an RGB channel. char color should be 'r', 'g', or 'b'. 
+void isolateChannel (Surface *surface, char color){
+		Surface::Iter iter = surface->getIter( getWindowBounds() );
+	
+	//If you want to isolate red channel, set blue and green pixels to 0
+	if (color == 'r'){
+			while( iter.line() ) {
+				while( iter.pixel() ) {
+					iter.b() = 0;
+				iter.g() = 0;
 			}
-			//If you want to isolate green channel, set blue and red pixels to 0
-			if (color == 'g'){
-					while( iter.line() ) {
-						while( iter.pixel() ) {
-							iter.b() = 0;
-						iter.r() = 0;
-					}
-				}
+		}
+	}
+	//If you want to isolate green channel, set blue and red pixels to 0
+	if (color == 'g'){
+			while( iter.line() ) {
+				while( iter.pixel() ) {
+					iter.b() = 0;
+				iter.r() = 0;
 			}
-			//If you want to isolate blue channel, set red and green pixels to 0
-			if (color == 'b'){
-					while( iter.line() ) {
-						while( iter.pixel() ) {
-							iter.r() = 0;
-						iter.g() = 0;
-					}
-				}
+		}
+	}
+	//If you want to isolate blue channel, set red and green pixels to 0
+	if (color == 'b'){
+			while( iter.line() ) {
+				while( iter.pixel() ) {
+					iter.r() = 0;
+				iter.g() = 0;
 			}
-		}</code>
+		}
+	}
+}
+		</code>
 							
 		<p>The mergeChannels function takes as input the three isolated RGB channels. It creates a new Surface object called resultSurface that will eventually become our final image. Two simple while loops are used to iterate through each line, and then each pixel, of the images. At each iteration, the RGB values from each individual channel are assigned to the resultSurface object. Once the entire result image has been composed, the Surface object is returned.</p>
 							
 		<code>
-		// Pass in the channels input1, input2, and input3, for the R,G, and B channels respectively.
-		Surface mergeChannels (  Surface *input1,  Surface *input2,  Surface *input3  ){
-				Surface resultSurface( input1->clone() );
-			Surface::Iter iterResult = resultSurface.getIter( getWindowBounds() );
-			Surface::Iter iter1 = input1->getIter( getWindowBounds() );
-			Surface::Iter iter2 = input2->getIter( getWindowBounds() );
-			Surface::Iter iter3 = input3->getIter( getWindowBounds() );
-			while( iterResult.line() && iter1.line() && iter2.line() && iter3.line() ) {
-					while( iterResult.pixel() && iter1.pixel() && iter2.pixel() && iter3.pixel() ) {
-						iterResult.r() = iter1.r();
-					iterResult.g() = iter2.g();
-					iterResult.b() = iter3.b();		
-				}
-			}
-			return resultSurface;		
-		}</code>
+// Pass in the channels input1, input2, and input3, for the R,G, and B channels respectively.
+Surface mergeChannels (  Surface *input1,  Surface *input2,  Surface *input3  ){
+		Surface resultSurface( input1->clone() );
+	Surface::Iter iterResult = resultSurface.getIter( getWindowBounds() );
+	Surface::Iter iter1 = input1->getIter( getWindowBounds() );
+	Surface::Iter iter2 = input2->getIter( getWindowBounds() );
+	Surface::Iter iter3 = input3->getIter( getWindowBounds() );
+	while( iterResult.line() && iter1.line() && iter2.line() && iter3.line() ) {
+			while( iterResult.pixel() && iter1.pixel() && iter2.pixel() && iter3.pixel() ) {
+				iterResult.r() = iter1.r();
+			iterResult.g() = iter2.g();
+			iterResult.b() = iter3.b();		
+		}
+	}
+	return resultSurface;		
+}
+		</code>
 								
 		<h5>Results</h5>
 		<p>The following diagram depicts which input images are mapped to which pixel values. For example, in Output 1, the red pixels are taken from input1, the green pixels are taken from input2, and the blue pixels are taken from input3.</p>
@@ -201,44 +205,46 @@ export default {
 		</ol>
 		<p>The photos are imported in the main setup() function. The two functions of interest are thus titled shiftSurf and addSurfaces. shiftSurf takes a single image file (Surface) and slides the pixels to the left or right by a value designated by the variable shiftBy. Pixels are clamped to the edge of the surface to avoid index errors when trying to shift beyond the boundary of the pixel array.</p>	
 		<code>
-			void code_LF_shiftApp::shiftSurf(Surface *inputSurface, float shiftBy){
-			  Surface tempSurface( inputSurface->clone() );
+void code_LF_shiftApp::shiftSurf(Surface *inputSurface, float shiftBy){
+  Surface tempSurface( inputSurface->clone() );
 
-			  Surface::Iter iterTemp = tempSurface.getIter( getWindowBounds() );
-			  Surface::Iter iterInput = inputSurface->getIter( getWindowBounds() );
+  Surface::Iter iterTemp = tempSurface.getIter( getWindowBounds() );
+  Surface::Iter iterInput = inputSurface->getIter( getWindowBounds() );
 
-			  while( iterTemp.line() && iterInput.line()) {
-			      while( iterTemp.pixel() && iterInput.pixel()) {
-			          iterInput.r() = iterTemp.rClamped(shiftBy,0);
-			          iterInput.g() = iterTemp.gClamped(shiftBy,0);
-			          iterInput.b() = iterTemp.bClamped(shiftBy,0);
-			      }
-			  }
-			}</code>
-			<p>addSurfaces iterates through each of the shifted Surfaces and successively adds their corresponding pixel values to a final output Surface.</p>
-			<code>
-			void code_LF_shiftApp::addSurfaces (Surface *outputSurface){
-			    Surface::Iter iterOutput = outputSurface->getIter( getWindowBounds() );
-			    while( iterOutput.line() ) {
-			        while( iterOutput.pixel() ) {
-			            iterOutput.r() = 0;
-			            iterOutput.g() = 0;
-			            iterOutput.b() = 0;
-			        }
-			    }        
-			    for(int ii = 0; ii<16; ii++){
-			        Surface currentSurf = mySurface[ii];
-			        Surface::Iter iterOutput = outputSurface->getIter( getWindowBounds() );
-			        Surface::Iter iterCurrent = currentSurf.getIter( getWindowBounds() );
-			        while( iterOutput.line() && iterCurrent.line()) {
-			            while( iterOutput.pixel() && iterCurrent.pixel()) {
-			                iterOutput.r() += iterCurrent.r()/16.0f;
-			                iterOutput.g() += iterCurrent.g()/16.0f;
-			                iterOutput.b() += iterCurrent.b()/16.0f;
-			            }
-			        }
-			    }
-		}</code>
+  while( iterTemp.line() && iterInput.line()) {
+      while( iterTemp.pixel() && iterInput.pixel()) {
+          iterInput.r() = iterTemp.rClamped(shiftBy,0);
+          iterInput.g() = iterTemp.gClamped(shiftBy,0);
+          iterInput.b() = iterTemp.bClamped(shiftBy,0);
+      }
+  }
+}
+		</code>
+		<p>addSurfaces iterates through each of the shifted Surfaces and successively adds their corresponding pixel values to a final output Surface.</p>
+		<code>
+void code_LF_shiftApp::addSurfaces (Surface *outputSurface){
+    Surface::Iter iterOutput = outputSurface->getIter( getWindowBounds() );
+    while( iterOutput.line() ) {
+        while( iterOutput.pixel() ) {
+            iterOutput.r() = 0;
+            iterOutput.g() = 0;
+            iterOutput.b() = 0;
+        }
+    }        
+    for(int ii = 0; ii<16; ii++){
+        Surface currentSurf = mySurface[ii];
+        Surface::Iter iterOutput = outputSurface->getIter( getWindowBounds() );
+        Surface::Iter iterCurrent = currentSurf.getIter( getWindowBounds() );
+        while( iterOutput.line() && iterCurrent.line()) {
+            while( iterOutput.pixel() && iterCurrent.pixel()) {
+                iterOutput.r() += iterCurrent.r()/16.0f;
+                iterOutput.g() += iterCurrent.g()/16.0f;
+                iterOutput.b() += iterCurrent.b()/16.0f;
+            }
+        }
+    }
+}
+		</code>
 
 		<h5>Test Photos</h5>
 		<p><a href='http://www.eecis.udel.edu/~yu/'>Professor Jingyi Yu</a> from the University of Delaware, a leading researcher in the field of computational photography, provides a set of sample images with which this code can be tested. The picture set is available here (as of 10/06/11):  <a href='http://www.eecis.udel.edu/~yu/Teaching/CISC829_S10/handouts/toyLF.zip'> http://www.eecis.udel.edu/~yu/Teaching/CISC829_S10/handouts/toyLF.zip</a>. 256 images are provided, but for the sake of simplicity, only the top row of 16 images is used in this analysis. The first and last images in the set are shown below.</p>	
@@ -262,29 +268,30 @@ export default {
 		<img src='/images/project_pics/ccp/p4_files/monitorFlash.jpg'/>
 		<p><a href='http://www.processing.org'>Processing</a> was used to control the screen's output. A large rectangle with the same dimensions as the monitor is created and the fill color of this rectangle is then changed at some time interval. The parameter totalFlashTime allows the user to set the flash time. Each color will be flashed for one-third of this value. The result is a bit jarring to look at, but it gets the job done. The simple code that runs the flash algorithm is given below:</p>
 		<code>
-		int totalFlashTime = 100; //In milliseconds
-		int stage = 1;
-		int x = 2560; //horizontal pixels in the screen
-		int y = 1440; //vertical pixels in the screen
-		void setup(){
+int totalFlashTime = 100; //In milliseconds
+int stage = 1;
+int x = 2560; //horizontal pixels in the screen
+int y = 1440; //vertical pixels in the screen
+void setup(){
 
-		size(x, y, P2D); //size of the processing window
+size(x, y, P2D); //size of the processing window
 
-	}
-		void draw(){
-		  if(stage == 0){
-		    fill(255, 0, 0); //flash red
-		    rect(0, 0, x, y);
-		  }else if(stage==1){
-		    fill(0, 255, 0); //flash blue
-		    rect(0, 0, x,y);
-		  }else{
-		    fill(0, 0, 255); //flash green
-		    rect(0, 0, x, y);
-		  }
-		  stage = (stage+1)%3;
-		  delay(totalFlashTime/3); 
-		}</code>	
+}
+void draw(){
+  if(stage == 0){
+    fill(255, 0, 0); //flash red
+    rect(0, 0, x, y);
+  }else if(stage==1){
+    fill(0, 255, 0); //flash blue
+    rect(0, 0, x,y);
+  }else{
+    fill(0, 0, 255); //flash green
+    rect(0, 0, x, y);
+  }
+  stage = (stage+1)%3;
+  delay(totalFlashTime/3); 
+}
+		</code>	
 				
 		<h5>Multichromatic Flash Results</h5>
 		<p>The resulting images have the distinct motion-color effect that we hoped to see.</p>
@@ -302,7 +309,6 @@ export default {
 		<img src='/images/project_pics/ccp/p4_files/multiChromFlash6.JPG'/>
 		
 		<p>While these images serve as a proof-of-concept for the idea, the more interesting part comes when we start using the information constrained in these trails to calculate properties of the objects in motion (speed, acceleration, frequency, etc). Explorations in this direction will be coming in the following weeks - stay tuned.</p>
-
 		
 		<h4 id="multiflash"> Project 4 - Multiflash Imaging</h4>
 		<p>Project 3 takes a look at a solution to the computer vision challenge of determining 3D objects from highly textured, complex images. The solution we'll be looking at to solve this is multi-flash imaging. A more in-depth introduction to the technique, as well as many references, can be found at Ramesh Raskar's site for <a href='http://web.media.mit.edu/~raskar/NprCamera/'>non-photorealistic imaging</a>.</p>
@@ -323,16 +329,18 @@ export default {
 		
 		<p>The two FindDepthEdges files setup the environment by importing the image files, rendering the appropriate grayscale bitmaps, and calling the edge-detection functions. The main difference between the two files is how they handle the initial image import. FindDepthEdges_flashes.m imports four separate images,</p>
 		<code>
-		img1 = imread('up.jpg');
-		img2 = imread( 'right.jpg' );
-		img3 = imread( 'down.jpg' );
-		img4 = imread( 'left.jpg' );</code>
+img1 = imread('up.jpg');
+img2 = imread( 'right.jpg' );
+img3 = imread( 'down.jpg' );
+img4 = imread( 'left.jpg' );
+		</code>
 		<p>while FindDepthEdges_color.m imports a single image file and then splits the channels of that file into three distinct bitmap objects representing the red, green, and blue channels.</p>
 		<code>
-		colorImage = imread('colorIm3.jpg'); 
-		imgR = colorImage(:,:,1);
-		imgG = colorImage(:,:,2);
-		imgB = colorImage(:,:,3);</code>
+colorImage = imread('colorIm3.jpg'); 
+imgR = colorImage(:,:,1);
+imgG = colorImage(:,:,2);
+imgB = colorImage(:,:,3);
+		</code>
 
 		<p> Note that in the multi-flash technique, we import four images (up, down, left, right), while we only import three for the multi-color technique (red, green, blue). The code in each FindDepthEdges file is changed accordingly to incorporate these differences. </p>
 		

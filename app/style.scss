@@ -74,4 +74,12 @@ a, .content .project-title a, .header .contacts a, .header .title a {
 		line-height: 1.6;
 		max-width: 100%;
 	}
+	code {
+		background: #f0f0f0;
+		display: block;
+		padding: 0.5em 1.5em;
+		white-space: pre;
+		border-radius: 2px;
+		overflow-x: scroll;
+	}
 }

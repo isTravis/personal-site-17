@@ -2,6 +2,7 @@ export default {
 	title: 'shubble',
 	description: 'Knock to connect.',
 	slug: 'shubble',
+	year: '2012',
 	pic: 'nav/shubble.png',
 	html: `
 		<p>Shubble is your sharing bubble. The project aims to remove the disparity between human-to-human knowledge sharing and computer-to-computer knowledge sharing. The project seeks to leverage the same proximity-based privileging that humans employ in daily conversation. Face to face conversation leverages the shared physical location of its members, whereas digital conversation leverages cloud-based permissioning (accounts, passwords, etc). By creating a shared digital space based on device location, we create a seamless way to share digital les with those in your meeting space. The project identifies mobile devices in a common space and creates a shared repository between the owners of those devices.</p>

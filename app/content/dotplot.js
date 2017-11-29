@@ -2,6 +2,7 @@ export default {
 	title: 'dotPlot',
 	description: 'A kit of parts to create dynamic 3D drawing utensils.',
 	slug: 'dotplot',
+	year: '2011',
 	pic: 'nav/dotplot.jpeg',
 	html: `
 		<p>dotPlot provides a kit of parts that enables people to create dynamic 3D drawing utensils.</p>

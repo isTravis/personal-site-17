@@ -2,6 +2,7 @@ export default {
 	title: 'audioCodes',
 	description: 'Imperceptible tones to embed digital information.',
 	slug: 'audiocodes',
+	year: '2012',
 	pic: 'nav/audiofile.jpg',
 	html: `
 		<p>AudioFile overlays imperceptible tones on standard audio tracks to embed digital information that can be decoded by standard mobile devices. AudioFile lets gives users explore their media more deeply by granting them access to a new channel of communication. The project creates sound that is simultaneously meaningful to humans and machines. Movie tracks can be annotated with actor details, songs can be annotated with artist information, or public announcements can be infused with targeted, meaningful data.</p>

@@ -2,6 +2,7 @@ export default {
 	title: 'point&Shoot',
 	description: 'Mobile-to-mobile directional communication with light.',
 	slug: 'psd',
+	year: '2011',
 	pic: 'nav/psd.jpg',
 	html: `
 		<p>Point & Shoot Data explores the use of visible light as a wireless communication medium for mobile devices. A snap-on case allows users to send messages to other mobile devices based on directionality and proximity. No email address, phone number, or account login is needed, just point and shoot your messages!</p>

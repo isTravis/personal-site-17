@@ -2,6 +2,7 @@ export default {
 	title: 'surkat',
 	description: 'Browser-based circuit capture and simulation.',
 	slug: 'surkat',
+	year: '2013',
 	pic: 'nav/surkat.jpg',
 	html: `
 		<h3 id='introduction'> Introduction </h3>

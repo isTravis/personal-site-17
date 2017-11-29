@@ -2,6 +2,7 @@ export default {
 	title: 'encodedSurfaces',
 	description: 'Deterministic textures in digitally fabricated surfaces to encode data about the object they are on.',
 	slug: 'encodedsurfaces',
+	year: '2011-2013',
 	pic: 'nav/encoded.jpg',
 	html: `
 		<p>For my thesis work at the MIT Media Lab, I'm building technologies to create a self-descriptive universe. To provide context, this work is being done in the Viral Spaces group; an ever-evolving creature. From its origins in viral communication and radio systems, it has grown to explore mobile device ecologies, their influence on our physical spaces, and most recently, their ability to create meaningful experiences in our everyday lives. Building on this past experience, the group has transitioned from designing communicative spaces to creative spaces. Spaces that enable experiences that are instructive, creative, and engaging.  To that end, I'm exploring how we can leverage the 'classic' part of our environments - the passive objects that don't have built in radios, sensors, and batteries - to create these spaces.</p>

@@ -2,6 +2,7 @@ export default {
 	title: 'howToMake ___',
 	description: 'Projects for How To Make Almost Anything 2013.',
 	slug: 'htmaa',
+	year: '2012',
 	pic: 'nav/htmaa.jpg',
 	html: `
 		<p>This page captures my projects built for <a href='http://ng.cba.mit.edu/'>Neil Gershenfeld's</a> Fall 2012 <a href='http://fab.cba.mit.edu/classes/863.12/'>MAS.863 How To Make (Almost) Anything</a> course.</p>

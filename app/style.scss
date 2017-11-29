@@ -65,6 +65,11 @@ a, .content .project-title a, .header .contacts a, .header .title a {
 		a {
 			text-decoration: none;	
 		}
+		.year {
+			opacity: 0.25;
+			padding-left: 1em;
+			font-weight: 600;
+		}
 	}
 	.project-description {
 

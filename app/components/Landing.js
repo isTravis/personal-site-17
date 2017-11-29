@@ -16,11 +16,16 @@ const Landing = function() {
 			</div>
 			<div className={'content'}>
 				<div className={'container'}>
-					{content.projects.map((project)=> {
+					{content.projects.sort((foo, bar)=> {
+						if (foo.year < bar.year) { return 1; }
+						if (foo.year > bar.year) { return -1; }
+						return 0;
+					}).map((project)=> {
 						return (
 							<div className={'project-wrapper'} key={`project-${project.slug}`} >
 								<div className={'project-title'}>
 									<Link to={`/${project.slug}`}>{project.title}</Link>
+									<span className={'year'}>{project.year}</span>
 								</div>
 								<div className={'project-description'}>{project.description}</div>
 							</div>

@@ -2,6 +2,7 @@ export default {
 	title: 'smartLighting',
 	description: 'Wireless communications using LED lights.',
 	slug: 'smartlighting',
+	year: '2008-2010',
 	pic: 'nav/smartlighting.jpeg',
 	html: `
 		<p>The Boston University Smart Lighting Center, led by Professor Thomas Little, is an effort to leverage the unique properties of solid state lighting to create intelligent lighting systems. The project strives to embed communications technology into general purpose lighting - providing data connectivity wherever there is man-made light.</p>

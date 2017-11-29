@@ -2,6 +2,7 @@ export default {
 	title: 'lgcComics',
 	description: 'Turning Jack Chick comics into overtly ridiculous demon-child comics.',
 	slug: 'lgc',
+	year: '2013',
 	pic: 'nav/lgc.jpg',
 	html: `
 		<p>Jack Chick makes some ridiculous comics (ridiculous in the hateful, extremist sense). Conspiracy theorists make ridiculous websites (in the hateful, comic sans sense). So, naturally, we combined the two.</p>

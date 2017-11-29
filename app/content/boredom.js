@@ -2,6 +2,7 @@ export default {
 	title: 'boredomBuster',
 	description: '2013 Comedy Hack Day project. Solving boredom automatically.',
 	slug: 'boredom',
+	year: '2013',
 	pic: 'nav/boredom.jpg',
 	html: `
 		<p>Boredom Busters is a project built during the 2013 Comedy Hack Day, produced by Cultivated Wit, and hosted at the MIT Media Lab. The project uses galvanic skin response sensors to detect when a wearer is becoming bored, and delivers an appropriate intervention.</p>

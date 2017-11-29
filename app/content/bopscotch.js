@@ -2,6 +2,7 @@ export default {
 	title: 'bopscotch',
 	description: 'A tweak on the classic hopscotch game.',
 	slug: 'bopscotch',
+	year: '2012',
 	pic: 'nav/bopscotch.jpg',
 	html: `
 		<p>Bopscotch is a tweak on the classic hopscotch game. Each square of the court is associated with a specific tone, allowing a player to create a melody, or team up with others to compose complex melodies, as they hop over the court. By layering tones onto hopscotch, sound is mapped on top of space which strengthens connections between spatial and aural awareness.</p>

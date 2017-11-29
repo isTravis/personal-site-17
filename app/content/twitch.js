@@ -2,6 +2,7 @@ export default {
 	title: 'twitch',
 	description: 'Electronic muscle control for video game adventures.',
 	slug: 'twitch',
+	year: '2013',
 	pic: 'nav/twitch.jpg',
 	html: `
 		<p>The Mirai Hackathon was hosted at the MIT Media Lab at the beginning of Fall 2013. Bringing artists from Japan, Media Lab students, and industry designers together, we built. Working with Daito Manabe, exploring the future of entertainment, we developed the game Twitch.</p>

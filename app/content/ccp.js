@@ -2,6 +2,7 @@ export default {
 	title: 'computationalCamera',
 	description: 'Taking cameras beyond image capture.',
 	slug: 'ccp',
+	year: '2012',
 	pic: 'nav/ccp.jpg',
 	html: `
 		<p>This page captures my projects and work completed for <a href='http://web.media.mit.edu/~raskar/' target='blank'>Ramesh Raskar's</a> Fall 2011 <a href='http://cameraculture.media.mit.edu/Fall2011ComputationalCamera' target='blank'>MAS.531 Computational Camera and Photography</a> course. </p>

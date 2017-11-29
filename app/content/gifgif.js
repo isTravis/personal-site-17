@@ -2,6 +2,7 @@ export default {
 	title: 'GIFGIF',
 	description: 'Extracting the emotional sentiment of animated gifs from over 3,000,000 pariwise comparisons.',
 	slug: 'gifgif',
+	year: '2013-2014',
 	pic: 'nav/gifgif.jpg',
 	html: `
 		<p>An animated gif is a magical thing. It contains the power to convey emotion, empathy, and context in a subtle way that text or emoticons simply can't.</p>

@@ -2,6 +2,7 @@ export default {
 	title: 'openAndorra',
 	description: 'Andorra as smart country testbed for Europe and beyond.',
 	slug: 'openAndorra',
+	year: '2013',
 	pic: 'nav/andorra.jpg',
 	html: `
 		<p>Beginning in May 2013, I joined the Government of Andorra and became the Director of Technology for their Smart Country program. The program is seeking to revitalize the countries economy by introducing new technologies and infrastructure. </p>

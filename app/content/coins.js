@@ -2,6 +2,7 @@ export default {
 	title: '99Coins',
 	description: 'Laser cut uniquely identifiable coins for 99 Fridays.',
 	slug: 'coins',
+	year: '2012-2014',
 	pic: 'nav/coin.jpg',
 	html: `
 		<p>For a monthly party, a tradition was started of creating admission coins. The coins are used to make sure only members of the community are given access, food, and drink. As a side-project of my thesis work, we decided to make encoded coins. The coins are fabricated with a series of cavities that encode 32 bits of information. The coins can be read and decoded by a custom-made coin reader (see video below).</p>

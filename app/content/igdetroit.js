@@ -2,6 +2,7 @@ export default {
 	title: 'igDetroit',
 	description: 'Studying broken municipal lighting in Detroit.',
 	slug: 'igdetroit',
+	year: '2012',
 	pic: 'nav/detroit.jpg',
 	html: `
 		<h4>Innovators Guild: Detroit - Lighting Challenge</h4>

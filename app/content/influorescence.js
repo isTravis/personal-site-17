@@ -2,6 +2,7 @@ export default {
 	title: 'influorescence',
 	description: 'A two-way tangible interface for ambient lighting control and power monitoring.',
 	slug: 'influorescence',
+	year: '2011',
 	pic: 'nav/inflo.jpeg',
 	html: `
 		<p>influorescence (inflorescence + fluorescence) is a two-way tangible interface for ambient lighting control and power monitoring.</p>

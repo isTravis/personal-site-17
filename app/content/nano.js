@@ -2,6 +2,7 @@ export default {
 	title: 'nano',
 	description: 'Sub-diffusive photon transport in aperiodic nanostructures.',
 	slug: 'nano',
+	year: '2010-2011',
 	pic: 'nav/nano.png',
 	html: `
 		<p>The <a href='http://www.bu.edu/nano' target='blank'>Nanomaterials and Nanostructure Optics Group</a>, led by Luca Dal Negro focuses on exploring subdiffusive transport of photons in aperiodic nanostructure lattices.</p>

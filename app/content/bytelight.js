@@ -1,6 +1,6 @@
 export default {
-	title: 'Bytelight',
-	description: 'Optical communications for indoor positioning',
+	title: 'bytelight',
+	description: 'Optical communications for indoor positioning.',
 	slug: 'bytelight',
 	pic: 'nav/bytelight.png',
 	html: `

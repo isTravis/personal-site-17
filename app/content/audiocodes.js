@@ -1,5 +1,5 @@
 export default {
-	title: 'Audio Codes',
+	title: 'audioCodes',
 	description: 'Imperceptible tones to embed digital information.',
 	slug: 'audiocodes',
 	pic: 'nav/audiofile.jpg',

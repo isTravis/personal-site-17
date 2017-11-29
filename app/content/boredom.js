@@ -1,5 +1,5 @@
 export default {
-	title: 'Boredom Buster',
+	title: 'boredomBuster',
 	description: '2013 Comedy Hack Day project. Solving boredom automatically.',
 	slug: 'boredom',
 	pic: 'nav/boredom.jpg',

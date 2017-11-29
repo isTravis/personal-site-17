@@ -1,6 +1,6 @@
 export default {
-	title: 'Bopscotch',
-	description: 'A tweak on the classic hopscotch game',
+	title: 'bopscotch',
+	description: 'A tweak on the classic hopscotch game.',
 	slug: 'bopscotch',
 	pic: 'nav/bopscotch.jpg',
 	html: `

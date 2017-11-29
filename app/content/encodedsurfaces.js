@@ -1,5 +1,5 @@
 export default {
-	title: 'Encoded Surfaces',
+	title: 'encodedSurfaces',
 	description: 'Deterministic textures in digitally fabricated surfaces to encode data about the object they are on.',
 	slug: 'encodedsurfaces',
 	pic: 'nav/encoded.jpg',

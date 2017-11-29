@@ -1,6 +1,6 @@
 export default {
 	title: 'dotPlot',
-	description: 'A kit of parts to create dynamic 3D drawing utensils',
+	description: 'A kit of parts to create dynamic 3D drawing utensils.',
 	slug: 'dotplot',
 	pic: 'nav/dotplot.jpeg',
 	html: `

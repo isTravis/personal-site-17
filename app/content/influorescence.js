@@ -1,8 +1,26 @@
 export default {
-	markdown: "<p>influorescence (inflorescence + fluorescence) is a two-way tangible interface for ambient lighting control and power monitoring.</p>\n\t\t\t\n\t\t\t<iframe src='http://player.vimeo.com/video/32718508?title=0&amp;byline=0&amp;portrait=0' width='600' height='338' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\n\t\t\t<!-- <p> <strong>Problem:</strong> Shared resources don't gain the sympathy of the community that uses it (e.g. earth's environment, shared living spaces, etc). The responsibility falls too lightly across the shoulders of all users, and no one person feels sufficiently responsible to maintain the resource.</p>\n\t\t\t<p><strong>Solution:</strong> We distill the effects of consumption to a personal level. In this case, your energy consumption directly influences your own personal 'ecosystem'.</p>\n\t\t\t -->\n\t\t\t \n\t\t\t<p><strong>The Project:</strong> </p>\n\t\t\t<p>- We take the environment as the shared resource of interest.</br>\n\t\t\t- Individuals' daily energy consumption creates unseen influences on the environment.</br>\n\t\t\t- This unseen influence is too abstract to produce an effective call to action.</br>\n\t\t\t- Our goal is to create an organic form that displays your relationship to your energy use.</br>\n\t\t\t- We explore the relationship between life (the organic form) and consumption.</p>\n\t\t\t\t\n\t\t\t\n\t\t\t<p><strong>The Interface:</strong> </p>\n\t\t\t<p>A garden will represent the organic form and the brightness of an LED light system will be the energy consumer. Higher energy consumption in the lighting system will lead to a tangible garden display that appears less healthy.</p>\n\t\t\t<p>The lights can be directly controlled by a light switch and the garden will react accordingly. Or, the garden can be directly manipulated (groomed or killed) to in turn influence the state of the lighting system.</p>\n\t\t\t<img src='/images/project_pics/infloPic1.png' width='600px' align='center'/>\n\t\t\t<p></p>\n\t\t\t<img src='/images/project_pics/infloPic2.png' width='600px' align='center'/>\n\t\t\t<p></p>\n\t\t\t<img src='/images/project_pics/infloPic3.jpeg' width='600px' align='center'/>\n\t\t\t<p></p>\n\t\t\t<img src='/images/project_pics/infloPic4.jpeg' width='600px' align='center'/>\n\t\t\t\n\t\t\t\n\t\t\t<p>influorescence was done in collaboration with <a href='http://www.colorsaregood.com/'>Valentine Heun</a>, <a href='http://slcl.ca'>Stephanie Lin</a>, and <a href='http://shaunsalzberg.com/'>Shaun Salzberg</a> at the <a href='http://media.mit.edu'>MIT Media Lab</a>.</p>",
-	pic: "nav/inflo.jpeg",
-	slug: "influorescence",
-	description: "A two-way tangible interface for ambient lighting control and power monitoring",
-	title: "influorescence",
-	subProjects: []
+	title: 'influorescence',
+	description: 'A two-way tangible interface for ambient lighting control and power monitoring.',
+	slug: 'influorescence',
+	pic: 'nav/inflo.jpeg',
+	html: `
+		<p>influorescence (inflorescence + fluorescence) is a two-way tangible interface for ambient lighting control and power monitoring.</p>
+		<iframe src='http://player.vimeo.com/video/32718508?title=0&amp;byline=0&amp;portrait=0' width='800' height='388' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		<p><strong>The Project:</strong></p>
+		<ul>
+			<li>We take the environment as the shared resource of interest.</li>
+			<li>Individuals' daily energy consumption creates unseen influences on the environment.</li>
+			<li>This unseen influence is too abstract to produce an effective call to action.</li>
+			<li>Our goal is to create an organic form that displays your relationship to your energy use.</li>
+			<li>We explore the relationship between life (the organic form) and consumption.</li>
+		</ul>
+		<p><strong>The Interface:</strong> </p>
+		<p>A garden will represent the organic form and the brightness of an LED light system will be the energy consumer. Higher energy consumption in the lighting system will lead to a tangible garden display that appears less healthy.</p>
+		<p>The lights can be directly controlled by a light switch and the garden will react accordingly. Or, the garden can be directly manipulated (groomed or killed) to in turn influence the state of the lighting system.</p>
+		<img src='/images/project_pics/infloPic1.png' />
+		<img src='/images/project_pics/infloPic2.png' />
+		<img src='/images/project_pics/infloPic3.jpeg' />
+		<img src='/images/project_pics/infloPic4.jpeg' />
+		<p>influorescence was done in collaboration with <a href='http://www.colorsaregood.com/'>Valentine Heun</a>, <a href='http://slcl.ca'>Stephanie Lin</a>, and <a href='http://shaunsalzberg.com/'>Shaun Salzberg</a> at the <a href='http://media.mit.edu'>MIT Media Lab</a>.</p>
+	`,
 };

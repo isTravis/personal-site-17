@@ -1,6 +1,6 @@
 export default {
-	title: 'Computational Camera',
-	description: 'Taking cameras beyond image capture',
+	title: 'computationalCamera',
+	description: 'Taking cameras beyond image capture.',
 	slug: 'ccp',
 	pic: 'nav/ccp.jpg',
 	html: `
@@ -320,11 +320,11 @@ void draw(){
 
 		<h5>Software Setup</h5>
 		<p>Generously, much of the source code used for this project has been provided <a href='http://vision.ai.uiuc.edu/~tankh/NPRCameraSrc.tar.gz'>here</a> by <a href='http://vision.ai.uiuc.edu/~tankh/'>Kar-Han Tan</a> (also note that all of my source code for this project can be <a href='#ccp_p3_source'>downloaded below</a>). My code is Matlab based and split into three  files:</p>
-		<ul>
-			<li><pre>FindDepthEdges_flashes.m  //main application for the multi-flash technique</pre></li>
-			<li><pre>FindDepthEdges_color.m  //main application for the multi-color technique</pre></li>
-			<li><pre>hysteresis_thresholding.m  //implements thresholding algorithm</pre></li>
-		</ul>			
+		<code>
+FindDepthEdges_flashes.m  //main application for the multi-flash technique
+FindDepthEdges_color.m  //main application for the multi-color technique
+hysteresis_thresholding.m  //implements thresholding algorithm
+		</code>			
 		
 		
 		<p>The two FindDepthEdges files setup the environment by importing the image files, rendering the appropriate grayscale bitmaps, and calling the edge-detection functions. The main difference between the two files is how they handle the initial image import. FindDepthEdges_flashes.m imports four separate images,</p>

@@ -1,6 +1,5 @@
 module.exports = [
 	'/',
-	'/about',
 	'/404.html',
 	'/bytelight',
 	'/htmaa',

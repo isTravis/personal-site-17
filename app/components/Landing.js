@@ -23,6 +23,12 @@ const Landing = function() {
 					}).map((project)=> {
 						return (
 							<div className={'project-wrapper'} key={`project-${project.slug}`} >
+								{/*
+								<div
+									className={'project-landing-image'}
+									style={{ backgroundImage: `url('/images/${project.pic}')` }}
+								/> 
+								*/}
 								<div className={'project-title'}>
 									<Link to={`/${project.slug}`}>{project.title}</Link>
 									<span className={'year'}>{project.year}</span>

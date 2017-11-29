@@ -56,6 +56,11 @@ a, .content .project-title a, .header .contacts a, .header .title a {
 	.project-wrapper {
 		// font-size: 18px;
 		margin-bottom: calc(4 * #{$unitHeight});
+		&:after {
+			display: table;
+			clear: both;
+			content: "";
+		}
 	}
 	.project-title {
 		font-weight: 800;
@@ -74,6 +79,15 @@ a, .content .project-title a, .header .contacts a, .header .title a {
 	.project-description {
 
 	}
+	// .project-landing-image {
+	// 	display: block;
+	// 	width: 150px;
+	// 	height: 50px;
+	// 	float: right;
+	// 	background-size: cover;
+	// 	background-repeat: no-repeat;
+	// 	background-position: center center;
+	// }
 	p, ul, ol, h1, h2, h3, img, video, iframe {
 		margin: 0em 0em 2em;
 		line-height: 1.6;
